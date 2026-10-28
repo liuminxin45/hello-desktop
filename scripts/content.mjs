@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const catalog = JSON.parse(fs.readFileSync(path.join(root, 'content/chapters.json'), 'utf8'));
-export const read = relative => fs.readFileSync(path.join(root, relative), 'utf8');
+// A generated directory is semantically identical under LF and CRLF checkouts.
+export const read = relative => fs.readFileSync(path.join(root, relative), 'utf8').replace(/\r\n/g, '\n');
 
 export function markdownFiles(directory = root) {
   const ignore = new Set(['.git', '.cache', 'node_modules', 'bin', 'obj', 'artifacts', '.vs']);

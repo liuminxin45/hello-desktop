@@ -32,6 +32,8 @@
 
 `.github/workflows/verify.yml` 配置了相同课程检查、Windows 托管/原生实验、跨语言调用和实验制品归档。远端实际状态以提交对应的 [GitHub Actions](https://github.com/liuminxin45/hello-desktop/actions) 记录为准；配置存在不等于远端运行成功。
 
+首轮 Windows runner 暴露了 CRLF 检出使目录原始字符串比较误报的问题。已为仓库声明 LF，并让内容读取统一换行；本地分别以 LF、临时 CRLF 目录执行检查，均通过后恢复原文件。此修复只改变校验兼容性，不改变章节内容。
+
 ## 未声称验证的范围
 
 - 完整 WPF/Qt/Electron/WinUI 工作台，真实 UI 调度、关闭竞态、DPI、输入法与辅助技术。
