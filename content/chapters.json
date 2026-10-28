@@ -1,0 +1,38 @@
+{
+  "edition": "first-text-edition",
+  "description": "written 表示正文可阅读，不表示章节中的全部练习均已实测。",
+  "parts": [
+    { "number": 1, "title": "一、程序怎样在 Windows 上运行" },
+    { "number": 2, "title": "二、界面怎样可靠地响应用户" },
+    { "number": 3, "title": "三、模块怎样交给别人使用" },
+    { "number": 4, "title": "四、程序怎样与数据和系统相处" },
+    { "number": 5, "title": "五、出问题后怎样找到证据" },
+    { "number": 6, "title": "六、怎样把版本交到用户手里" }
+  ],
+  "chapters": [
+    { "number": 1, "part": 1, "path": "docs/chapters/01-deliverable-client.md", "status": "written" },
+    { "number": 2, "part": 1, "path": "docs/chapters/02-build-and-run.md", "status": "written" },
+    { "number": 3, "part": 1, "path": "docs/chapters/03-process-thread-resource.md", "status": "written" },
+    { "number": 4, "part": 1, "path": "docs/chapters/04-window-message-loop.md", "status": "written" },
+    { "number": 5, "part": 2, "path": "docs/chapters/05-commands-and-input.md", "status": "written" },
+    { "number": 6, "part": 2, "path": "docs/chapters/06-async-cancellation.md", "status": "written" },
+    { "number": 7, "part": 2, "path": "docs/chapters/07-state-and-testing.md", "status": "written" },
+    { "number": 8, "part": 2, "path": "docs/chapters/08-learn-ui-frameworks.md", "status": "written" },
+    { "number": 9, "part": 3, "path": "docs/chapters/09-dll-lib-dependencies.md", "status": "written" },
+    { "number": 10, "part": 3, "path": "docs/chapters/10-api-c-abi.md", "status": "written" },
+    { "number": 11, "part": 3, "path": "docs/chapters/11-sdk-contract.md", "status": "written" },
+    { "number": 12, "part": 3, "path": "docs/chapters/12-plugin-isolation.md", "status": "written" },
+    { "number": 13, "part": 4, "path": "docs/chapters/13-files-registry.md", "status": "written" },
+    { "number": 14, "part": 4, "path": "docs/chapters/14-sqlite-transactions.md", "status": "written" },
+    { "number": 15, "part": 4, "path": "docs/chapters/15-network-ipc.md", "status": "written" },
+    { "number": 16, "part": 4, "path": "docs/chapters/16-permissions-security.md", "status": "written" },
+    { "number": 17, "part": 5, "path": "docs/chapters/17-logs-and-environment.md", "status": "written" },
+    { "number": 18, "part": 5, "path": "docs/chapters/18-minidump-symbols.md", "status": "written" },
+    { "number": 19, "part": 5, "path": "docs/chapters/19-performance-hangs.md", "status": "written" },
+    { "number": 20, "part": 5, "path": "docs/chapters/20-binary-analysis.md", "status": "written" },
+    { "number": 21, "part": 6, "path": "docs/chapters/21-install-uninstall.md", "status": "written" },
+    { "number": 22, "part": 6, "path": "docs/chapters/22-ci-artifacts.md", "status": "written" },
+    { "number": 23, "part": 6, "path": "docs/chapters/23-update-compatibility.md", "status": "written" },
+    { "number": 24, "part": 6, "path": "docs/chapters/24-ai-engineering.md", "status": "written" }
+  ]
+}

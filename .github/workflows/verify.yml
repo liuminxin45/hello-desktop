@@ -1,0 +1,56 @@
+name: Course and labs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Course structure and SQLite lab
+        run: npm test
+      - name: Managed contract checks
+        run: dotnet run --project examples/managed/Workbench.Checks -c Release
+      - name: Configure native lab
+        run: cmake -S examples/native -B .cache/native -A x64
+      - name: Build native lab
+        run: cmake --build .cache/native --config Release
+      - name: Native contract checks
+        run: ctest --test-dir .cache/native -C Release --output-on-failure
+      - name: Managed to native boundary
+        run: dotnet run --project examples/managed/Workbench.Cli -c Release -- native "${{ github.workspace }}/.cache/native/Release/workbench_native.dll"
+      - name: Publish framework-dependent teaching CLI
+        run: dotnet publish examples/managed/Workbench.Cli -c Release --self-contained false -o artifacts/managed
+      - name: Record source and toolchain
+        shell: pwsh
+        run: |
+          $PSVersionTable.PSVersion.ToString() | Out-File artifacts/toolchain.txt
+          git rev-parse HEAD | Out-File artifacts/source.txt
+          dotnet --info | Out-File artifacts/dotnet.txt
+          node --version | Out-File artifacts/node.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teaching-labs-windows-x64
+          if-no-files-found: error
+          include-hidden-files: true
+          path: |
+            artifacts/
+            .cache/native/Release/*.dll
+            .cache/native/Release/*.exe
+            .cache/native/Release/*.pdb
+            .cache/native/Release/*.lib
+            examples/native/workbench.h

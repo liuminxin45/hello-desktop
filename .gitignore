@@ -1,0 +1,26 @@
+# Local tooling and generated output
+.vs/
+.idea/
+**/bin/
+**/obj/
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
+.cache/
+artifacts/
+TestResults/
+*.user
+*.suo
+
+# Local diagnostics, credentials, and editorial state
+*.dmp
+*.mdmp
+*.etl
+*.log
+*.pfx
+*.p12
+*.key
+.env
+.env.*
+!.env.example
+.review/

@@ -1,0 +1,31 @@
+{
+  "checkedOn": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "reviewType": "author-self-review",
+  "scope": "24 章正文作者回读；下列关键机制查阅官方材料。不是独立盲审，也不是所有框架和产品场景的运行验收。",
+  "runtimeEvidence": "editorial/validation.md",
+  "sources": [
+    { "chapters": [2], "topic": "发布与运行时条件", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/" },
+    { "chapters": [4], "topic": "Win32 消息与队列", "url": "https://learn.microsoft.com/en-us/windows/win32/winmsg/using-messages-and-message-queues" },
+    { "chapters": [4, 6], "topic": "WPF 线程与调度", "url": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/threading-model" },
+    { "chapters": [6, 24], "topic": "协作取消", "url": "https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads" },
+    { "chapters": [8], "topic": "Qt 对象线程归属", "url": "https://doc.qt.io/qt-6/threads-qobject.html" },
+    { "chapters": [8], "topic": "Electron 进程模型", "url": "https://www.electronjs.org/docs/latest/tutorial/process-model" },
+    { "chapters": [9, 16], "topic": "DLL 搜索与依赖", "url": "https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order" },
+    { "chapters": [9], "topic": "DllMain 与加载器约束", "url": "https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-best-practices" },
+    { "chapters": [10], "topic": "互操作类型与生命周期", "url": "https://learn.microsoft.com/en-us/dotnet/standard/native-interop/best-practices" },
+    { "chapters": [10], "topic": "符号修饰与架构", "url": "https://learn.microsoft.com/en-us/cpp/build/reference/decorated-names" },
+    { "chapters": [12], "topic": "COM apartment", "url": "https://learn.microsoft.com/en-us/windows/win32/com/processes--threads--and-apartments" },
+    { "chapters": [13], "topic": "注册表视图", "url": "https://learn.microsoft.com/en-us/windows/win32/winprog64/registry-redirector" },
+    { "chapters": [14], "topic": "SQLite 事务", "url": "https://sqlite.org/lang_transaction.html" },
+    { "chapters": [14], "topic": "SQLite WAL", "url": "https://sqlite.org/wal.html" },
+    { "chapters": [14, 23], "topic": "一致性备份", "url": "https://sqlite.org/backup.html" },
+    { "chapters": [16], "topic": "Electron 本地能力边界", "url": "https://www.electronjs.org/docs/latest/tutorial/security" },
+    { "chapters": [18], "topic": "本地 dump 采集条件", "url": "https://learn.microsoft.com/en-us/windows/win32/wer/collecting-user-mode-dumps" },
+    { "chapters": [18], "topic": "ProcDump 命令", "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/procdump" },
+    { "chapters": [18], "topic": "WinDbg 自动分析", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/using-the--analyze-extension" },
+    { "chapters": [19], "topic": "ETW", "url": "https://learn.microsoft.com/en-us/windows/win32/etw/event-tracing-portal" },
+    { "chapters": [20], "topic": "PE 与 COFF", "url": "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format" },
+    { "chapters": [21], "topic": "包模型、分发与运行时分开选择", "url": "https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/" }
+  ]
+}
